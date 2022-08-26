@@ -1,11 +1,10 @@
-const express = require("express");
-const port = process.env.PORT || 8080;
-const app = express();
+const jsonServer = require('json-server')
+const server = jsonServer.create()
+const router = jsonServer.router('db.json')
+const middlewares = jsonServer.defaults()
 
-app.use(express.static(__dirname + "/dist/"));
-app.get(/.*/, function(req, res) {
-  res.sendfile(__dirname + "/dist/index.html");
-});
-app.listen(port);
-
-console.log("Server started...");
+server.use(middlewares)
+server.use(router)
+server.listen(3000, () => {
+  console.log('JSON Server is running')
+})
