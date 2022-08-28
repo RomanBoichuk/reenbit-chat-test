@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.8fd84a8d67a58aaaed73e9398fc51db9.js"
+  "/precache-manifest.f180882b16c5110f9c5d42003d4a3223.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "reenbit-chat-test"});
